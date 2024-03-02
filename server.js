@@ -5,6 +5,7 @@ import mongodbConnection from "./server/database/mongodbConnection.js";
 import usersRoute from "./server/routes/user.route.js";
 import { notFound, errorHandler } from "./server/handlers/errorHandler.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 // Database connection
 mongodbConnection();
@@ -13,6 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(cors());
 
 // routes
 app.use("/api/users", usersRoute);

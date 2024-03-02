@@ -1,6 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const baseQuery = fetchBaseQuery({ baseUrl: "" });
+// https://merrn-auth.onrender.com
+const baseQuery = fetchBaseQuery({
+  baseUrl: "",
+});
 
 export const apiSlice = createApi({
   baseQuery,
